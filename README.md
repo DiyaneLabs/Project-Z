@@ -50,9 +50,9 @@ Features:
 • Interactive call-to-action sections
 • Professional Klezmer branding and visual design
 
-[🚀Live Demo](https://ntsikelelovc.github.io/project-0/Klezmer_Website/)
+[🚀Live Demo](https://diyanelabs.github.io/Project-Z/Klezmer_Website/?utm_source=chatgpt.com)
 
-[Repository](https://github.com/NtsikeleloVC/project-0/tree/main/Klezmer_Website)
+[Repository](https://github.com/DiyaneLabs/Project-Z/tree/main/Klezmer_Website?utm_source=chatgpt.com)
 
 ---
 
