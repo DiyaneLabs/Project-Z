@@ -33,9 +33,9 @@ Features:
 • Modern navigation bar
 • Email call-to-action UI
 
-[🚀Live Demo](https://ntsikelelovc.github.io/project-0/pokemon-landing-page/)
+[🚀Live Demo](https://diyanelabs.github.io/Project-Z/pokemon-landing-page/?utm_source=chatgpt.com)
 
-[Repository](https://github.com/NtsikeleloVC/project-0/tree/main/pokemon-landing-page)
+[Repository](https://github.com/DiyaneLabs/Project-Z/tree/main/pokemon-landing-page?utm_source=chatgpt.com)
 
 ---
 
