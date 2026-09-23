@@ -70,9 +70,9 @@ Features:
 • Fire-inspired branding and visual design
 • Interactive JavaScript functionality
 
-[🚀Live Demo](https://ntsikelelovc.github.io/project-0/AI-Roast-My-Code/frontend)
+[🚀Live Demo](https://diyanelabs.github.io/Project-Z/AI-Roast-My-Code/frontend/?utm_source=chatgpt.com)
 
-[Repository](https://github.com/NtsikeleloVC/project-0/tree/main/AI-Roast-My-Code)
+[Repository](https://github.com/DiyaneLabs/Project-Z/tree/main/AI-Roast-My-Code?utm_source=chatgpt.com)
 
 ---
 
