@@ -13,6 +13,7 @@ import brandFour from "../assets/images/brand-four.jpeg";
 import brandFive from "../assets/images/brand-five.jpeg";
 import brandSix from "../assets/images/brand-six.jpeg";
 import brandSeven from "../assets/images/brand-seven.jpeg";
+import aboutImage from "../assets/images/mugumonems-brand-showcase.png";
 
 
 
@@ -149,10 +150,10 @@ export default function Home() {
           {/* LEFT: COMPANY IMAGE */}
           <div className="about-image">
             <div className="about-image">
-  <img
-    src="/src/assets/images/mugumonems-brand-showcase.png"
-    alt="MugumoNems branded merchandise and corporate gifts"
-  />
+ <img
+  src={aboutImage}
+  alt="MugumoNems branded merchandise and corporate gifts"
+/>
 </div>
           </div>
 
