@@ -1,0 +1,813 @@
+/* =========================================
+   MUGUMONEMS - PRODUCT MANAGER
+   Monochrome admin interface
+========================================= */
+
+.pm-section {
+  width: 100%;
+  color: #f5f5f5;
+  padding: 24px 0;
+}
+
+.pm-section *,
+.pm-section *::before,
+.pm-section *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   PAGE HEADING
+========================================= */
+
+.pm-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.pm-heading h1 {
+  margin: 5px 0;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.pm-heading p:not(.admin-eyebrow) {
+  margin: 0;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.admin-eyebrow {
+  margin: 0;
+  color: #aaa;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.pm-section .admin-primary-button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 11px 18px;
+  border: 1px solid #fff;
+  border-radius: 7px;
+  background: #fff;
+  color: #111;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.pm-section .admin-primary-button:hover:not(:disabled) {
+  background: #222;
+  color: #fff;
+}
+
+.pm-section button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+/* =========================================
+   SUMMARY CARDS
+========================================= */
+
+.pm-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.pm-summary>div {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 20px;
+  border: 1px solid #303030;
+  border-radius: 9px;
+  background: #191919;
+}
+
+.pm-summary span {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.pm-summary strong {
+  color: #fff;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+/* =========================================
+   MESSAGES
+========================================= */
+
+.pm-message {
+  margin: 14px 0;
+  padding: 12px 15px;
+  border-radius: 7px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.pm-error {
+  border: 1px solid #8b3434;
+  background: #351b1b;
+  color: #ffbaba;
+}
+
+.pm-success {
+  border: 1px solid #47724f;
+  background: #192b1d;
+  color: #b9e8c0;
+}
+
+/* =========================================
+   PRODUCT TABLE PANEL
+========================================= */
+
+.pm-panel {
+  overflow: hidden;
+  border: 1px solid #303030;
+  border-radius: 10px;
+  background: #191919;
+}
+
+.pm-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 18px;
+  border-bottom: 1px solid #303030;
+}
+
+.pm-search {
+  display: flex;
+  width: min(100%, 350px);
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  border: 1px solid #444;
+  border-radius: 7px;
+  background: #111;
+  color: #aaa;
+}
+
+.pm-search input {
+  width: 100%;
+  min-width: 0;
+  height: 40px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 13px;
+}
+
+.pm-search input::placeholder {
+  color: #777;
+}
+
+.pm-toolbar select {
+  min-height: 40px;
+  padding: 0 32px 0 12px;
+  border: 1px solid #444;
+  border-radius: 7px;
+  background: #111;
+  color: #fff;
+  font-size: 13px;
+}
+
+/* =========================================
+   PRODUCT TABLE
+========================================= */
+
+.pm-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.pm-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.pm-table th {
+  padding: 15px 18px;
+  border-bottom: 1px solid #333;
+  background: #202020;
+  color: #aaa;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.pm-table td {
+  padding: 15px 18px;
+  border-bottom: 1px solid #2b2b2b;
+  color: #ddd;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.pm-table tbody tr {
+  transition: background 150ms ease;
+}
+
+.pm-table tbody tr:hover {
+  background: #222;
+}
+
+.pm-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.pm-table td strong {
+  display: block;
+  color: #fff;
+  font-size: 13px;
+}
+
+.pm-table td small {
+  display: block;
+  margin-top: 4px;
+  color: #888;
+  font-size: 11px;
+}
+
+/* =========================================
+   PUBLICATION STATUS
+========================================= */
+
+.pm-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border: 1px solid #555;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.pm-status.is-published {
+  border-color: #55775d;
+  background: #1d3022;
+  color: #b8e5c0;
+}
+
+.pm-status.is-draft {
+  border-color: #555;
+  background: #292929;
+  color: #ccc;
+}
+
+/* =========================================
+   TABLE ACTIONS
+========================================= */
+
+.pm-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.pm-actions button {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background: #222;
+  color: #ddd;
+  cursor: pointer;
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+.pm-actions button:hover:not(:disabled) {
+  border-color: #aaa;
+  background: #333;
+  color: #fff;
+}
+
+/* =========================================
+   TABLE FOOTER
+========================================= */
+
+.pm-table-footer {
+  padding: 14px 18px;
+  border-top: 1px solid #303030;
+  color: #888;
+  font-size: 12px;
+}
+
+/* =========================================
+   EMPTY AND LOADING STATES
+========================================= */
+
+.pm-empty {
+  display: flex;
+  min-height: 190px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 25px;
+  color: #888;
+  text-align: center;
+}
+
+.pm-empty strong {
+  color: #fff;
+  font-size: 14px;
+}
+
+.pm-empty p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.pm-spinner {
+  animation: pm-spin 1s linear infinite;
+}
+
+@keyframes pm-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   PRODUCT EDIT MODAL
+========================================= */
+
+.pm-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(4px);
+}
+
+.pm-modal {
+  width: min(100%, 760px);
+  max-height: 90vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border: 1px solid #383838;
+  border-radius: 12px;
+  background: #181818;
+  color: #fff;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.5);
+}
+
+.pm-modal-heading {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 22px 25px;
+  border-bottom: 1px solid #333;
+  background: #181818;
+}
+
+.pm-modal-heading h2 {
+  margin: 6px 0 0;
+  color: #fff;
+  font-size: 21px;
+}
+
+.pm-close {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+}
+
+.pm-close:hover {
+  background: #333;
+}
+
+/* =========================================
+   PRODUCT FORM
+========================================= */
+
+.pm-modal form {
+  padding: 24px 25px;
+}
+
+.pm-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 19px;
+}
+
+.pm-form-grid label {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 8px;
+  color: #ddd;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pm-form-grid label input:not([type="checkbox"]),
+.pm-form-grid label select,
+.pm-form-grid label textarea {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  outline: none;
+  background: #101010;
+  color: #fff;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.pm-form-grid label textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.pm-form-grid label input:focus,
+.pm-form-grid label select:focus,
+.pm-form-grid label textarea:focus {
+  border-color: #aaa;
+}
+
+.pm-form-grid label input::placeholder,
+.pm-form-grid label textarea::placeholder {
+  color: #777;
+}
+
+.pm-form-grid label small {
+  color: #888;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.pm-full {
+  grid-column: 1 / -1;
+}
+
+.pm-publish-toggle {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 10px !important;
+  align-self: center;
+}
+
+.pm-publish-toggle input {
+  width: 17px;
+  height: 17px;
+  accent-color: #fff;
+}
+
+/* =========================================
+   MODAL ACTIONS
+========================================= */
+
+.pm-modal-actions {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 24px -25px -24px;
+  padding: 17px 25px;
+  border-top: 1px solid #333;
+  background: #181818;
+}
+
+.pm-cancel {
+  min-height: 42px;
+  padding: 10px 18px;
+  border: 1px solid #555;
+  border-radius: 6px;
+  background: transparent;
+  color: #ddd;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.pm-cancel:hover {
+  background: #292929;
+}
+
+/* =========================================
+   PRODUCT IMAGE GALLERY
+========================================= */
+
+.pm-image-manager {
+  margin-top: 28px;
+  padding-top: 23px;
+  border-top: 1px solid #383838;
+}
+
+.pm-image-manager-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.pm-image-manager-heading h3 {
+  margin: 0 0 6px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.pm-image-manager-heading p,
+.pm-image-hint {
+  margin: 0;
+  color: #999;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.pm-image-count {
+  flex-shrink: 0;
+  padding: 6px 10px;
+  border: 1px solid #444;
+  border-radius: 20px;
+  color: #ddd;
+  font-size: 12px;
+}
+
+/* Upload area */
+
+.pm-image-upload {
+  display: flex;
+  min-height: 120px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px;
+  border: 1px dashed #666;
+  border-radius: 9px;
+  background: #202020;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.pm-image-upload:hover {
+  border-color: #fff;
+  background: #292929;
+}
+
+.pm-image-upload:focus-within {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.pm-image-upload input {
+  display: none;
+}
+
+.pm-image-upload span {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.pm-image-upload small {
+  color: #999;
+  font-size: 11px;
+}
+
+.pm-image-upload.is-uploading {
+  cursor: wait;
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+/* Empty gallery */
+
+.pm-image-empty {
+  display: flex;
+  min-height: 76px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 14px;
+  padding: 16px;
+  border: 1px solid #383838;
+  border-radius: 9px;
+  color: #999;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Image grid */
+
+.pm-image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.pm-image-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #383838;
+  border-radius: 9px;
+  background: #202020;
+  transition: border-color 160ms ease;
+}
+
+.pm-image-card:hover {
+  border-color: #777;
+}
+
+/* Image preview */
+
+.pm-image-preview {
+  position: relative;
+  display: flex;
+  aspect-ratio: 1 / 1;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #292929;
+}
+
+.pm-image-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Primary image */
+
+.pm-primary-image {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 8px;
+  border-radius: 20px;
+  background: #fff;
+  color: #111;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* Image footer */
+
+.pm-image-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+  padding: 9px;
+  color: #ccc;
+  font-size: 11px;
+}
+
+.pm-image-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pm-image-actions button {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background: #292929;
+  color: #eee;
+  cursor: pointer;
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+.pm-image-actions button:hover:not(:disabled) {
+  border-color: #aaa;
+  background: #383838;
+}
+
+.pm-image-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 700px) {
+  .pm-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .pm-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .pm-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .pm-search {
+    width: 100%;
+  }
+
+  .pm-toolbar select {
+    width: 100%;
+  }
+
+  .pm-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pm-full {
+    grid-column: auto;
+  }
+
+  .pm-modal-backdrop {
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .pm-modal {
+    max-height: 95vh;
+  }
+
+  .pm-modal-heading {
+    padding: 18px;
+  }
+
+  .pm-modal form {
+    padding: 18px;
+  }
+
+  .pm-modal-actions {
+    margin: 22px -18px -18px;
+    padding: 15px 18px;
+  }
+
+  .pm-image-manager-heading {
+    flex-direction: column;
+  }
+
+  .pm-image-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 360px) {
+  .pm-image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pm-heading h1 {
+    font-size: 27px;
+  }
+}
