@@ -75,6 +75,28 @@ Features:
 [Repository](https://github.com/DiyaneLabs/Project-Z/tree/main/AI-Roast-My-Code?utm_source=chatgpt.com)
 
 ---
+🌐 MugumoNems Projects - Business & Digital Solutions Website (v1.0)
+
+A modern, responsive business website developed using React, TypeScript, and CSS to showcase digital services, projects, brands, and business solutions.
+
+Features:
+
+• Modern and responsive website design
+• Dedicated Home and About pages
+• Services showcase and business solutions
+• Portfolio and completed projects showcase
+• Our Brands section
+• Contact page for customer enquiries
+• React Router navigation with separate page routes
+• Reusable components and structured application architecture
+• Custom styling and professional user interface
+• Optimised for desktop and mobile devices
+
+🚀 [Live Demo](https://mugumonems.netlify.app/)
+
+[Repository](https://github.com/DiyaneLabs/Project-Z/tree/main/MugumoNems-Projects)
+
+---
 
 ## 🛍 Internet Culture Store
 
